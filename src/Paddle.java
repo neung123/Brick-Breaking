@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Paddle extends JPanel{
+
     // Fields
     private double x;
     private int width, height;
@@ -18,9 +19,11 @@ public class Paddle extends JPanel{
     // drawPaddle
     public void drawPaddle(Graphics2D graphics, int x){
         graphics.setColor(Color.WHITE);
-        graphics.fillRect((int) x, positiony, width, height);
+        graphics.fillRect((int)x, positiony, width, height);
     }
-
+    public Rectangle getRect(){
+        return new Rectangle((int)x,positiony,width,height);
+    }
 
 
 

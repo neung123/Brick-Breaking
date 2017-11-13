@@ -2,8 +2,9 @@ import java.awt.*;
 
 public class Ball {
 
-    private int x,y,dx,dy;
+    private double x,y,dx,dy;
     private int ballSize = 30;
+
     public Ball(){
         x = 200;
         y = 200;
@@ -35,6 +36,12 @@ public class Ball {
 
     public void drawBall(Graphics2D graphics){
         graphics.setColor(Color.ORANGE);
-        graphics.fillOval(x,y,ballSize,ballSize);
+        graphics.fillOval((int)x,(int)y,ballSize,ballSize);
     }
+    public Rectangle getRect(){
+        return new Rectangle((int)x,(int)y,ballSize,ballSize);
+    }
+
+    public void setDY(double theDY){dy = theDY;}
+    public double getDY(){return dy;}
 }

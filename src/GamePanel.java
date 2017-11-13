@@ -51,12 +51,22 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         }
     }
 
+    public void checkCollisions(){
+        Rectangle ballRect = ball.getRect();
+        Rectangle paddleRect = paddle.getRect();
+
+        if(ballRect.intersects(paddleRect)){
+            ball.setDY(-ball.getDY());
+        }
+    }
+
     public void update(){
+        checkCollisions();
         ball.update();
     }
 
     public  void draw(){
-        //drae bg
+        //draw background
         graphics.setColor(Color.DARK_GRAY);
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
 

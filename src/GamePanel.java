@@ -11,7 +11,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     private BufferedImage image;
     private Graphics2D graphics;
     Timer timer = new Timer(5 , this);
-    double x = 0,dx = 0;
+    double x ,dx = 0;
     Ball ball;
     Paddle paddle;
 
@@ -23,6 +23,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
         ball = new Ball();
         paddle = new Paddle();
+        x = BrickBreakingMain.WIDTH / 2 - paddle.width / 2;
         running = true;
 
         image = new BufferedImage(BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT,BufferedImage.TYPE_INT_RGB);
@@ -84,7 +85,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
     public void actionPerformed(ActionEvent e) {
         repaint();
-        x += dx;
+        x = Math.abs(Math.min(x + dx,BrickBreakingMain.WIDTH - paddle.width));
     }
 
     public void keyTyped(KeyEvent e) {
@@ -93,26 +94,26 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
-        if(key == KeyEvent.VK_LEFT){
+        if(key == KeyEvent.VK_LEFT ){
             left();
         }
-        if(key == KeyEvent.VK_RIGHT){
+        if(key == KeyEvent.VK_RIGHT ){
             right();
         }
     }
 
     public void keyReleased(KeyEvent e) {
         int key = e.getKeyCode();
-        if(key == KeyEvent.VK_LEFT){
+        if(key == KeyEvent.VK_LEFT ){
             leftStop();
         }
-        if(key == KeyEvent.VK_RIGHT){
+        if(key == KeyEvent.VK_RIGHT ){
             rightStop();
         }
     }
     public void leftStop(){dx = 0;}
     public void rightStop(){dx = 0;}
-    public void left(){dx = -5;}
-    public void right(){dx = 5;}
+    public void left(){ dx = -5; }
+    public void right(){ dx = 5; }
 }
 

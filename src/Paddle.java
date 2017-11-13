@@ -10,7 +10,7 @@ public class Paddle extends JPanel{
 
     // Constructor
     public Paddle(){
-        width = 100;
+        width = 150;
         height = 20;
         x = BrickBreakingMain.WIDTH / 2 - width / 2;
     }

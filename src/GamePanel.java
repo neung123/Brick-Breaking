@@ -88,14 +88,21 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         }
         if(key == KeyEvent.VK_RIGHT){
             right();
-
         }
     }
 
     public void keyReleased(KeyEvent e) {
-
+        int key = e.getKeyCode();
+        if(key == KeyEvent.VK_LEFT){
+            leftStop();
+        }
+        if(key == KeyEvent.VK_RIGHT){
+            rightStop();
+        }
     }
-    public void left(){dx = -1;}
-    public void right(){dx = 1;}
+    public void leftStop(){dx = 0;}
+    public void rightStop(){dx = 0;}
+    public void left(){dx = -5;}
+    public void right(){dx = 5;}
 }
 

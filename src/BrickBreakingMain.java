@@ -1,3 +1,6 @@
+/*
+Author - Thanapoom Rattanathumawat, Pornpavee Seri-umnuoy
+ */
 import javax.swing.*;
 
 public class BrickBreakingMain {

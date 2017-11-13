@@ -9,7 +9,6 @@ public class Ball {
         y = 200;
         dx = 3;
         dy = 3;
-
     }
 
     public void update(){
@@ -34,7 +33,7 @@ public class Ball {
         }
     }
 
-    public void draw(Graphics2D graphics){
+    public void drawBall(Graphics2D graphics){
         graphics.setColor(Color.ORANGE);
         graphics.fillOval(x,y,ballSize,ballSize);
     }

@@ -12,7 +12,6 @@ public class BrickBreakingMain {
         JFrame frame = new JFrame("Brick Breaking"); //Create the frame.
         GamePanel game = new GamePanel();
 
-
         frame.setSize(WIDTH,HEIGHT);
         frame.setLocationRelativeTo(null); //set location to the middle
         frame.setResizable(false); //can't extend the frame

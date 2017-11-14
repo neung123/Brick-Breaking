@@ -14,6 +14,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     double x ,dx = 0;
     Ball ball;
     Paddle paddle;
+    World world;
 
     public GamePanel(){
         timer.start();
@@ -24,6 +25,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         ball = new Ball();
         paddle = new Paddle();
         x = BrickBreakingMain.WIDTH / 2 - paddle.width / 2;
+        world = new World();
         running = true;
 
         image = new BufferedImage(BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT,BufferedImage.TYPE_INT_RGB);
@@ -73,6 +75,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
         ball.drawBall(graphics);
         paddle.drawPaddle(graphics,(int)x);
+//        world.drawWorld(graphics);
     }
 
     public  void paintComponent(Graphics graphics){

@@ -75,7 +75,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
         ball.drawBall(graphics);
         paddle.drawPaddle(graphics,(int)x);
-//        world.drawWorld(graphics);
+        world.drawWorld(graphics);
     }
 
     public  void paintComponent(Graphics graphics){

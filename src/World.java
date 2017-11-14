@@ -2,12 +2,12 @@ import java.awt.*;
 import java.util.ArrayList;
 
 /**
- * default of the bricks are 4 rows and 6 columns
+ * default of the bricks are 5 rows and 10 columns
  */
 public class World {
 
-    public int row = 4,column = 6;
-    private ArrayList<Brick> bricks = new ArrayList<>();
+    public int row = 5,column = 10;
+    public ArrayList<Brick> bricks = new ArrayList<>();
 
     public World(){
         initBrick();
@@ -21,7 +21,7 @@ public class World {
 
     }
 
-    private void initBrick() {
+    public void initBrick() {
 
         for (int j = 0; j < row; j++) {
             for (int i = 0; i < column; i++) {
@@ -30,7 +30,8 @@ public class World {
         }
     }
 
-    private void addBrick(Brick brick) {
+    public void addBrick(Brick brick) {
         bricks.add(brick);
     }
+
 }

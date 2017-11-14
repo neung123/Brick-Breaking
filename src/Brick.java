@@ -3,8 +3,8 @@ import java.awt.*;
 public class Brick {
 
     private int x,y;
-    public final static int width = BrickBreakingMain.WIDTH / 6;
-    public final static int height = (BrickBreakingMain.HEIGHT / 2 ) / 4;
+    public final static int width = BrickBreakingMain.WIDTH / 10;
+    public final static int height = (BrickBreakingMain.HEIGHT) / 15;
 
     public Brick(int x,int y){
         this.x = x;
@@ -21,7 +21,9 @@ public class Brick {
 
     }
 
-    public void drop(){ y -= height; }
+    public void drop(){ y += height; }
+
+    public int getY(){ return y; }
 
     public Rectangle getRect(){
         return new Rectangle(x,y,width,height);

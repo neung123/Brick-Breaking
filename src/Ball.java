@@ -6,8 +6,8 @@ public class Ball {
     private int ballSize = 30;
 
     public Ball(){
-        x = 200;
-        y = 200;
+        x = 400;
+        y = 400;
         dx = 3;
         dy = 3;
     }

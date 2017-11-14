@@ -10,8 +10,9 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     private boolean running;
     private BufferedImage image;
     private Graphics2D graphics;
-    Timer timer = new Timer(5 , this);
     double x ,dx = 0;
+    public int score = 0;
+    Timer timer = new Timer(5 , this);
     Ball ball;
     Paddle paddle;
     World world;
@@ -59,7 +60,25 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         Rectangle paddleRect = paddle.getRect();
 
         if(ballRect.intersects(paddleRect)){
-            ball.setDY(-ball.getDY());
+
+            if(ball.getDY() > 0) {
+
+                ball.setDY(-ball.getDY());
+
+                for (Brick b : world.bricks) b.drop();
+
+                for (int i = 0; i < world.column; i++) {
+                    world.addBrick(new Brick(i * Brick.width, 0));
+                }
+            }
+
+        }
+        for(int i = 0; i < world.bricks.size(); i++) {
+            if (ballRect.intersects(world.bricks.get(i).getRect())) {
+                world.bricks.remove(world.bricks.get(i));
+                score ++;
+                System.out.println(score);
+            }
         }
     }
 

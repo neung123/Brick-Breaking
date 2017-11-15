@@ -16,7 +16,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     Ball ball;
     Paddle paddle;
     World world;
-    Brick brick;
 
     public GamePanel(){
         timer.start();
@@ -76,9 +75,14 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         }
         for(int i = 0; i < world.bricks.size(); i++) {
             if (ballRect.intersects(world.bricks.get(i).getRect())) {
-                world.bricks.remove(world.bricks.get(i));
-                score ++;
-                System.out.println(score);
+                world.bricks.get(i).removeDef();
+
+
+                if(world.bricks.get(i).getDef() == 0){
+                    world.bricks.remove(world.bricks.get(i));
+                    score ++;
+                    System.out.println(score);
+                }else  ball.setDY(-ball.getDY());
             }
         }
     }

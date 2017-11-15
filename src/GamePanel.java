@@ -16,6 +16,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     Ball ball;
     Paddle paddle;
     World world;
+    Brick brick;
 
     public GamePanel(){
         timer.start();
@@ -96,6 +97,30 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         ball.drawBall(graphics);
         paddle.drawPaddle(graphics,(int)x);
         world.drawWorld(graphics);
+
+        if(ball.gameOverBall()){
+            drawGM();
+            running = false;
+        }
+        if(checkGameOverBrick() == true){
+            drawGM();
+            running = false;
+        }
+
+    }
+    public boolean checkGameOverBrick(){
+        for(int i = 0; i < world.bricks.size(); i++) {
+            if (world.bricks.get(i).getY() > BrickBreakingMain.HEIGHT - Brick.height) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void drawGM(){
+        graphics.setColor(Color.RED);
+        graphics.setFont(new Font("Courier New", Font.BOLD,50));
+        graphics.drawString("Game Over", 265, 250);
     }
 
     public  void paintComponent(Graphics graphics){

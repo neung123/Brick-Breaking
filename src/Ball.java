@@ -44,4 +44,14 @@ public class Ball {
 
     public void setDY(double theDY){dy = theDY;}
     public double getDY(){return dy;}
+
+    public boolean gameOverBall(){
+        boolean gameover = false;
+
+        if(y > BrickBreakingMain.HEIGHT - ballSize * 2){
+            gameover = true;
+        }
+
+        return gameover;
+    }
 }

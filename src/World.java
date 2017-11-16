@@ -34,6 +34,24 @@ public class World {
         bricks.add(brick);
     }
 
+    public int getMinimumHeight(){
+        int minH = BrickBreakingMain.HEIGHT;
+
+        for(int i = 0; i < bricks.size(); i++) {
+            minH = Math.min(minH, bricks.get(i).getY());
+        }
+
+        return minH;
+    }
+
+    public boolean checkGameOverBrick(){
+        for(int i = 0; i < bricks.size(); i++) {
+            if (bricks.get(i).getY() > BrickBreakingMain.HEIGHT - Brick.height * 2) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }

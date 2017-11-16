@@ -67,8 +67,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
                 for (Brick b : world.bricks) b.drop();
 
-                for (int i = 0; i < world.column; i++) {
-                    world.addBrick(new Brick(i * Brick.width, 0));
+                if(world.getMinimumHeight() > 0) {
+                    addNewLine();
                 }
             }
 
@@ -84,6 +84,13 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
                     System.out.println(score);
                 }else  ball.setDY(-ball.getDY());
             }
+        }
+    }
+
+    public void addNewLine(){
+        int h = world.getMinimumHeight() - Brick.height;
+        for (int i = 0; i < world.column; i++) {
+            world.addBrick(new Brick(i * Brick.width, h));
         }
     }
 
@@ -106,20 +113,13 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             drawGM();
             running = false;
         }
-        if(checkGameOverBrick() == true){
+        if(world.checkGameOverBrick() == true){
             drawGM();
             running = false;
         }
 
     }
-    public boolean checkGameOverBrick(){
-        for(int i = 0; i < world.bricks.size(); i++) {
-            if (world.bricks.get(i).getY() > BrickBreakingMain.HEIGHT - Brick.height) {
-                return true;
-            }
-        }
-        return false;
-    }
+
 
     public void drawGM(){
         graphics.setColor(Color.RED);

@@ -1,11 +1,14 @@
 import java.awt.*;
+import java.util.Random;
+
 
 public class Brick {
 
     private int x,y;
-    private int def = 4;
     public final static int width = BrickBreakingMain.WIDTH / 10;
     public final static int height = (BrickBreakingMain.HEIGHT) / 15;
+    private Random rand = new Random();
+    private int  def = rand.nextInt(5) + 1;
 
     public Brick(int x,int y){
         this.x = x;
@@ -25,7 +28,7 @@ public class Brick {
 
     }
 
-    public void drop(){ y += height; }
+    public void drop(){ y += 10; }
 
     public int getY(){ return y; }
 

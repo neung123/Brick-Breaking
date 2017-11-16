@@ -102,7 +102,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     public  void draw(){
 
         //draw background
-        graphics.setColor(Color.DARK_GRAY);
+        graphics.setColor( new Color(0,0,0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
 
         ball.drawBall(graphics);

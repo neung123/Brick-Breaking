@@ -7,6 +7,7 @@ public class BrickBreakingMain {
 
     public static final int WIDTH = 800;
     public static  final int HEIGHT = 600;
+
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Brick Breaking"); //Create the frame.

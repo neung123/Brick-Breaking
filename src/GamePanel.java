@@ -2,8 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
-import java.security.Key;
-
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
@@ -38,6 +36,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
     public void playGame() {
     //game loop
+
+        drawstart();
 
         while (running){
 
@@ -99,15 +99,17 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         ball.update();
     }
 
-    public  void draw(){
+    public void draw(){
 
         //draw background
-        graphics.setColor( new Color(0,0,0));
+        graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
 
+        //startMenu.drawStart(graphics);
         ball.drawBall(graphics);
         paddle.drawPaddle(graphics,(int)x);
         world.drawWorld(graphics);
+
 
         if(ball.gameOverBall()){
             drawGM();
@@ -119,12 +121,59 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         }
 
     }
+    public void drawstart(){
+        graphics.setColor( new Color(199, 199, 199));
+        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+
+        for(double i = 0; i < 4000 ; i++){
+            drawStartText();
+            for(double k = 0; k < 4000 ; k++){
+                repaint();
+            }
+        }
+        graphics.setColor( new Color(199, 199, 199));
+        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+        for(double i = 0; i < 3000 ; i++){
+            graphics.setColor(Color.RED);
+            graphics.setFont(new Font("Courier New", Font.BOLD,50));
+            graphics.drawString("3", 400, 250);
+            for(double k = 0; k < 3000 ; k++){
+                repaint();
+            }
+        }
+        graphics.setColor( new Color(199, 199, 199));
+        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+        for(double i = 0; i < 3000 ; i++){
+            graphics.setColor(Color.RED);
+            graphics.setFont(new Font("Courier New", Font.BOLD,50));
+            graphics.drawString("2", 400, 250);
+            for(double k = 0; k < 3000 ; k++){
+                repaint();
+            }
+        }
+        graphics.setColor( new Color(199, 199, 199));
+        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+        for(double i = 0; i < 3000 ; i++){
+            graphics.setColor(Color.RED);
+            graphics.setFont(new Font("Courier New", Font.BOLD,50));
+            graphics.drawString("1", 400, 250);
+            for(double k = 0; k < 3000 ; k++){
+                repaint();
+            }
+        }
+    }
 
 
     public void drawGM(){
         graphics.setColor(Color.RED);
         graphics.setFont(new Font("Courier New", Font.BOLD,50));
         graphics.drawString("Game Over", 265, 250);
+    }
+
+    public void drawStartText(){
+        graphics.setColor(Color.RED);
+        graphics.setFont(new Font("Courier New", Font.BOLD,50));
+        graphics.drawString("Start Game", 265, 250);
     }
 
     public  void paintComponent(Graphics graphics){
@@ -164,7 +213,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     }
     public void leftStop(){dx = 0;}
     public void rightStop(){dx = 0;}
-    public void left(){ dx = -5; }
-    public void right(){ dx = 5; }
+    public void left(){ dx = -10; }
+    public void right(){ dx = 10; }
 }
 

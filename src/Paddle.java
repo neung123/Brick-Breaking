@@ -12,7 +12,7 @@ public class Paddle extends JPanel{
     // Constructor
     public Paddle(){
         width = 150;
-        height = 20;
+        height = 15;
     }
 
     // drawPaddle

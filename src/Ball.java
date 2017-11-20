@@ -7,9 +7,9 @@ public class Ball {
 
     public Ball(){
         x = 400;
-        y = 400;
-        dx = 4;
-        dy = 4;
+        y = 500;
+        dx = 5;
+        dy = 5;
     }
 
     public void update(){

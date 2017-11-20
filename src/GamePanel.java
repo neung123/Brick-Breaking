@@ -14,6 +14,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     Ball ball;
     Paddle paddle;
     World world;
+    private int lineChecker = 1;
 
     public GamePanel(){
         timer.start();
@@ -64,8 +65,16 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             if(ball.getDY() > 0) {
 
                 ball.setDY(-ball.getDY());
-
-                for (Brick b : world.bricks) b.drop();
+                // Addline ever third time the ball intersects paddle
+                if(lineChecker % 3 == 0){
+                    for (Brick b : world.bricks) {
+                        b.drop();
+                    }
+                    lineChecker+=1;
+                }
+                else{
+                    lineChecker+=1;
+                }
 
                 if(world.getMinimumHeight() > 0) {
                     addNewLine();
@@ -82,7 +91,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
                     world.bricks.remove(world.bricks.get(i));
                     score ++;
                     System.out.println(score);
-                }else  ball.setDY(-ball.getDY());
+                }
+                else  ball.setDY(-ball.getDY());
             }
         }
     }
@@ -110,6 +120,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         paddle.drawPaddle(graphics,(int)x);
         world.drawWorld(graphics);
 
+        drawScore();
 
         if(ball.gameOverBall()){
             drawGM();
@@ -121,8 +132,17 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         }
 
     }
+    public void drawScore(){
+        graphics.setColor(Color.WHITE);
+        graphics.setFont(new Font("Courier New", Font.BOLD,30));
+        graphics.drawString("Score: ", 620, 550);
+        graphics.drawString(Integer.toString(score), 750, 550);
+        for(double k = 0; k < 3000 ; k++){
+            repaint();
+        }
+    }
     public void drawstart(){
-        graphics.setColor( new Color(199, 199, 199));
+        graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
 
         for(double i = 0; i < 4000 ; i++){
@@ -131,32 +151,32 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
                 repaint();
             }
         }
-        graphics.setColor( new Color(199, 199, 199));
+        graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
         for(double i = 0; i < 3000 ; i++){
             graphics.setColor(Color.RED);
             graphics.setFont(new Font("Courier New", Font.BOLD,50));
-            graphics.drawString("3", 400, 250);
+            graphics.drawString("3", 370, 250);
             for(double k = 0; k < 3000 ; k++){
                 repaint();
             }
         }
-        graphics.setColor( new Color(199, 199, 199));
+        graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
         for(double i = 0; i < 3000 ; i++){
-            graphics.setColor(Color.RED);
+            graphics.setColor(Color.YELLOW);
             graphics.setFont(new Font("Courier New", Font.BOLD,50));
-            graphics.drawString("2", 400, 250);
+            graphics.drawString("2", 370, 250);
             for(double k = 0; k < 3000 ; k++){
                 repaint();
             }
         }
-        graphics.setColor( new Color(199, 199, 199));
+        graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
         for(double i = 0; i < 3000 ; i++){
-            graphics.setColor(Color.RED);
+            graphics.setColor(Color.GREEN);
             graphics.setFont(new Font("Courier New", Font.BOLD,50));
-            graphics.drawString("1", 400, 250);
+            graphics.drawString("1", 370, 250);
             for(double k = 0; k < 3000 ; k++){
                 repaint();
             }
@@ -165,15 +185,15 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
 
     public void drawGM(){
-        graphics.setColor(Color.RED);
+        graphics.setColor(Color.WHITE);
         graphics.setFont(new Font("Courier New", Font.BOLD,50));
         graphics.drawString("Game Over", 265, 250);
     }
 
     public void drawStartText(){
-        graphics.setColor(Color.RED);
+        graphics.setColor(Color.WHITE);
         graphics.setFont(new Font("Courier New", Font.BOLD,50));
-        graphics.drawString("Start Game", 265, 250);
+        graphics.drawString("Start Game", 250, 250);
     }
 
     public  void paintComponent(Graphics graphics){

@@ -8,7 +8,7 @@ public class Brick {
     public final static int width = BrickBreakingMain.WIDTH / 10;
     public final static int height = (BrickBreakingMain.HEIGHT) / 15;
     private Random rand = new Random();
-    private int  def = rand.nextInt(4) + 1;
+    private int def = rand.nextInt(4) + 1;
 
     public Brick(int x,int y){
         this.x = x;

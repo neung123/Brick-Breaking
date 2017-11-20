@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.lang.reflect.GenericArrayType;
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
@@ -16,6 +17,13 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     World world;
     private int lineChecker = 1;
 
+    public static enum STATE{
+        MENU, PLAY, QUIT
+    };
+    public static STATE state = STATE.MENU;
+    public static STATE statePlay = STATE.PLAY;
+    public static STATE stateQuit = STATE.QUIT;
+
     public GamePanel(){
         timer.start();
         addKeyListener(this);
@@ -27,6 +35,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         x = BrickBreakingMain.WIDTH / 2 - paddle.width / 2;
         world = new World();
         running = true;
+
+        this.addMouseListener(new MouseInput());
 
         image = new BufferedImage(BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT,BufferedImage.TYPE_INT_RGB);
         graphics = (Graphics2D) image.getGraphics();
@@ -142,15 +152,23 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         }
     }
     public void drawstart(){
+
         graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+
+        while(state == STATE.MENU){
+            menu();
+        }
+
+        graphics.setColor( new Color(0, 0, 0));
+        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+
 
         for(double i = 0; i < 4000 ; i++){
             drawStartText();
             for(double k = 0; k < 4000 ; k++){
                 repaint();
-            }
-        }
+            }        }
         graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
         for(double i = 0; i < 3000 ; i++){
@@ -195,6 +213,26 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         graphics.setFont(new Font("Courier New", Font.BOLD,50));
         graphics.drawString("Start Game", 250, 250);
     }
+    public void menu(){
+
+        Rectangle playButton = new Rectangle(350,150,100,50);
+        Rectangle quitButton = new Rectangle(350,250,100,50);
+
+        Font font0 = new Font("arial", Font.BOLD, 50);
+        graphics.setFont(font0);
+        graphics.setColor(Color.WHITE);
+        graphics.drawString("BRICK BREAKER",200,100);
+
+        graphics.setColor(Color.WHITE);
+        Font font1 = new Font("arial", Font.BOLD, 30);
+        graphics.setFont(font1);
+        graphics.drawString("Play", playButton.x + 19, playButton.y + 30);
+        graphics.draw(playButton);
+        graphics.drawString("Quit", quitButton.x + 19, quitButton.y + 30);
+        graphics.draw(quitButton);
+        repaint();
+
+    }
 
     public  void paintComponent(Graphics graphics){
 
@@ -235,5 +273,11 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     public void rightStop(){dx = 0;}
     public void left(){ dx = -10; }
     public void right(){ dx = 10; }
+
+
+
+
+
+
 }
 

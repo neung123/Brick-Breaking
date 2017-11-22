@@ -7,7 +7,7 @@ public class Ball {
 
     public Ball(){
         x = 400;
-        y = 500;
+        y = 470;
         dx = 5;
         dy = 5;
     }

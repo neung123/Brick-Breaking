@@ -18,11 +18,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     private int lineChecker = 1;
 
     public static enum STATE{
-        MENU, PLAY, QUIT
+        MENU, PLAY
     };
     public static STATE state = STATE.MENU;
-    public static STATE statePlay = STATE.PLAY;
-    public static STATE stateQuit = STATE.QUIT;
+    public static STATE state2 = STATE.MENU;
 
     public GamePanel(){
         timer.start();
@@ -135,10 +134,22 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         if(ball.gameOverBall()){
             drawGM();
             running = false;
+            graphics.setColor( new Color(0, 0, 0));
+            graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+            drawRT();
+            while(state2 != STATE.PLAY){
+                running = true;
+            }
         }
         if(world.checkGameOverBrick() == true){
             drawGM();
             running = false;
+            graphics.setColor( new Color(0, 0, 0));
+            graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+            drawRT();
+            while(state2 != STATE.PLAY){
+                running = true;
+            }
         }
 
     }
@@ -168,7 +179,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             drawStartText();
             for(double k = 0; k < 4000 ; k++){
                 repaint();
-            }        }
+            }
+        }
         graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
         for(double i = 0; i < 3000 ; i++){
@@ -200,6 +212,24 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             }
         }
     }
+    public void drawRT(){
+        Rectangle retryButton = new Rectangle(350,350,100,50);
+        Rectangle quitButton = new Rectangle(350,250,100,50);
+
+        Font font0 = new Font("arial", Font.BOLD, 50);
+        graphics.setFont(font0);
+        graphics.setColor(Color.WHITE);
+        graphics.drawString("You cant give up now!!!",140,100);
+
+        graphics.setColor(Color.WHITE);
+        Font font1 = new Font("arial", Font.BOLD, 30);
+        graphics.setFont(font1);
+        graphics.drawString("Quit", quitButton.x + 12, quitButton.y + 30);
+        graphics.draw(quitButton);
+        graphics.drawString("Retry", retryButton.x + 12, retryButton.y + 30);
+        graphics.draw(retryButton);
+        repaint();
+    }
 
 
     public void drawGM(){
@@ -226,15 +256,15 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         graphics.setColor(Color.WHITE);
         Font font1 = new Font("arial", Font.BOLD, 30);
         graphics.setFont(font1);
-        graphics.drawString("Play", playButton.x + 19, playButton.y + 30);
+        graphics.drawString("Play", playButton.x + 12, playButton.y + 30);
         graphics.draw(playButton);
-        graphics.drawString("Quit", quitButton.x + 19, quitButton.y + 30);
+        graphics.drawString("Quit", quitButton.x + 12, quitButton.y + 30);
         graphics.draw(quitButton);
         repaint();
 
     }
 
-    public  void paintComponent(Graphics graphics){
+    public void paintComponent(Graphics graphics){
 
         Graphics2D graphics2 = (Graphics2D) graphics; //update graphics to graphics2
 

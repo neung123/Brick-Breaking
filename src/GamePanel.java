@@ -18,10 +18,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     private int lineChecker = 1;
 
     public static enum STATE{
-        MENU, PLAY
+        MENU, PLAY , START
     };
     public static STATE state = STATE.MENU;
-    public static STATE state2 = STATE.MENU;
+
 
     public GamePanel(){
         timer.start();
@@ -46,6 +46,11 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
     public void playGame() {
     //game loop
+        graphics.setColor( new Color(0, 0, 0));
+        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+        while(state == STATE.MENU){
+            menu();
+        }
 
         drawstart();
 
@@ -99,7 +104,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
                 if(world.bricks.get(i).getDef() == 0){
                     world.bricks.remove(world.bricks.get(i));
                     score ++;
-                    System.out.println(score);
                 }
                 else  ball.setDY(-ball.getDY());
             }
@@ -132,23 +136,47 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         drawScore();
 
         if(ball.gameOverBall()){
+            int checker = 1;
             drawGM();
             running = false;
             graphics.setColor( new Color(0, 0, 0));
             graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
             drawRT();
-            while(state2 != STATE.PLAY){
-                running = true;
+            while(state == STATE.PLAY || checker == 1){
+                System.out.print("");
+                if (state == STATE.START) {
+                    running = true;
+                    state = STATE.MENU;
+                    checker = 0;
+                    ball = new Ball();
+                    paddle = new Paddle();
+                    x = BrickBreakingMain.WIDTH / 2 - paddle.width / 2;
+                    world = new World();
+                    score = 0;
+                    lineChecker = 1;
+                }
             }
         }
         if(world.checkGameOverBrick() == true){
+            int checker = 1;
             drawGM();
             running = false;
             graphics.setColor( new Color(0, 0, 0));
             graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
             drawRT();
-            while(state2 != STATE.PLAY){
-                running = true;
+            while(state == STATE.PLAY || checker == 1){
+                System.out.print("");
+                if (state == STATE.START) {
+                    running = true;
+                    state = STATE.MENU;
+                    checker = 0;
+                    ball = new Ball();
+                    paddle = new Paddle();
+                    x = BrickBreakingMain.WIDTH / 2 - paddle.width / 2;
+                    world = new World();
+                    score = 0;
+                    lineChecker = 1;
+                }
             }
         }
 
@@ -164,12 +192,12 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     }
     public void drawstart(){
 
-        graphics.setColor( new Color(0, 0, 0));
-        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
-
-        while(state == STATE.MENU){
-            menu();
-        }
+//        graphics.setColor( new Color(0, 0, 0));
+//        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+//
+//        while(state == STATE.MENU){
+//            menu();
+//        }
 
         graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);

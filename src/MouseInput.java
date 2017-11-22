@@ -29,8 +29,7 @@ public class MouseInput implements MouseListener {
         }
         if(mx >= 350 && mx <= 450){
             if(my >= 350 && my <= 400){
-                GamePanel.state2 = GamePanel.STATE.PLAY;
-                System.out.println("fweij");
+                GamePanel.state = GamePanel.STATE.START;
             }
         }
 

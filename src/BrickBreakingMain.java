@@ -22,8 +22,6 @@ public class BrickBreakingMain {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //The EXIT_ON_CLOSE operation exits the program when user closes the frame.
         frame.setVisible(true); //Show it.
 
-
-
         game.playGame();
     }
 

@@ -23,6 +23,7 @@ public class BrickBreakingMain {
         frame.setVisible(true); //Show it.
 
         game.playGame();
+//        game.checkState(GamePanel.STATE.STARTMENU);
     }
 
 }

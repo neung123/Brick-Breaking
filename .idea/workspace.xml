@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214c3e89-bc50-4c49-bd67-186c358a7f20" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/Ball.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/BrickBreakingMain.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/GamePanel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/description.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/project-template.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BrickBreaking.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ball.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BrickBreakingMain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GamePanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Person.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ScoreBoard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/Ball.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/Ball.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/BrickBreakingMain.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/BrickBreakingMain.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/GamePanel.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/GamePanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BrickBreakingMain.java" afterPath="$PROJECT_DIR$/src/BrickBreakingMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GamePanel.java" afterPath="$PROJECT_DIR$/src/GamePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MouseInput.java" afterPath="$PROJECT_DIR$/src/MouseInput.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,21 +25,73 @@
       <file leaf-file-name="BrickBreakingMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="72" lean-forward="false" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+            <state relative-caret-position="357">
+              <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GamePanel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GamePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="280" column="30" lean-forward="true" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MouseInput.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MouseInput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScoreBoard.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ScoreBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="924">
+              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#313#314#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="method#readScoreBoard#0;class#ScoreBoard#0" expanded="false" />
+                <element signature="method#writeScoreBoard#0;class#ScoreBoard#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,12 +99,9 @@
       <file leaf-file-name="Ball.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
+            <state relative-caret-position="487">
               <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-              <folding>
-                <element signature="e#216#217#0" expanded="true" />
-                <element signature="e#245#246#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,6 +120,17 @@
       <find>paint</find>
       <find>graphic</find>
       <find>paintc</find>
+      <find>mo</find>
+      <find>draw</find>
+      <find>drawRT</find>
+      <find>menu</find>
+      <find>menu()</find>
+      <find>Startmenu</find>
+      <find>lineChecker</find>
+      <find>startmenu</find>
+      <find>PLAY</find>
+      <find>START</find>
+      <find>checkState</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -91,20 +147,26 @@
         <option value="$PROJECT_DIR$/src/Frame.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/BrickBreakingMain.java" />
         <option value="$PROJECT_DIR$/src/Ball.java" />
+        <option value="$PROJECT_DIR$/src/Person.java" />
+        <option value="$PROJECT_DIR$/src/Menu.java" />
+        <option value="$PROJECT_DIR$/src/BrickBreakingMain.java" />
+        <option value="$PROJECT_DIR$/src/store" />
+        <option value="$PROJECT_DIR$/src/MouseInput.java" />
+        <option value="$PROJECT_DIR$/src/ScoreBoard.java" />
+        <option value="$PROJECT_DIR$/src/Highscore.java" />
         <option value="$PROJECT_DIR$/src/GamePanel.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="952" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -117,7 +179,28 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="brick-breaking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brick-breaking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brick-breaking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brick-breaking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -186,22 +269,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33295193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3325792" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19888888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.132116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -212,9 +297,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -249,10 +332,176 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MouseInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" column="63" lean-forward="true" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScoreBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="method#readScoreBoard#0;class#ScoreBoard#0" expanded="false" />
+            <element signature="method#writeScoreBoard#0;class#ScoreBoard#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3465">
+          <caret line="165" column="18" lean-forward="false" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6153">
+          <caret line="297" column="0" lean-forward="true" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -265,10 +514,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -278,6 +524,22 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -296,6 +558,22 @@
           <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -304,10 +582,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -323,10 +598,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -336,6 +608,22 @@
           <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -354,6 +642,22 @@
           <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -362,38 +666,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/awt/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
+        <state relative-caret-position="487">
           <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="72" lean-forward="false" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+        <state relative-caret-position="357">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="42" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MouseInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Highscore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="280" column="30" lean-forward="true" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#update#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#newGame#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#GamePanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScoreBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="method#readScoreBoard#0;class#ScoreBoard#0" expanded="false" />
+            <element signature="method#writeScoreBoard#0;class#ScoreBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>

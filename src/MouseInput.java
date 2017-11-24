@@ -17,21 +17,27 @@ public class MouseInput implements MouseListener {
 //        Rectangle playButton = new Rectangle(350,150,100,50);
 //        Rectangle quitButton = new Rectangle(350,250,100,50);
 
-        if(mx >= 350 && mx <= 450){
-            if(my >= 150 && my <= 200){
-                GamePanel.state = GamePanel.STATE.PLAY;
+        if (GamePanel.state == GamePanel.STATE.STARTMENU){
+            if(mx >= 350 && mx <= 450){
+                if(my >= 150 && my <= 200){
+                    GamePanel.state = GamePanel.STATE.PLAY;
+                }else if(my >= 250 && my <= 300){
+                    System.exit(1);
+                }
             }
         }
-        if(mx >= 350 && mx <= 450){
-            if(my >= 250 && my <= 300){
-                System.exit(1);
+
+        if (GamePanel.state == GamePanel.STATE.GAMEOVER){
+            if(mx >= 350 && mx <= 450){
+                if(my >= 250 && my <= 300){
+                    System.exit(1);
+                }else if(my >= 350 && my <= 400){
+                    GamePanel.state = GamePanel.STATE.NEWGAME;
+                }
             }
         }
-        if(mx >= 350 && mx <= 450){
-            if(my >= 350 && my <= 400){
-                GamePanel.state = GamePanel.STATE.START;
-            }
-        }
+
+
 
     }
 

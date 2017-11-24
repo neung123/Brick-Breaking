@@ -43,7 +43,14 @@ public class Ball {
     }
 
     public void setDY(double theDY){dy = theDY;}
+
     public double getDY(){return dy;}
+
+    public double getX() { return x; }
+
+    public void setDx(double dx) {
+        this.dx = dx;
+    }
 
     public boolean gameOverBall(){
         boolean gameover = false;

@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214c3e89-bc50-4c49-bd67-186c358a7f20" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Person.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ScoreBoard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/Ball.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/Ball.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/Brick.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/Brick.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/BrickBreakingMain.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/BrickBreakingMain.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/GamePanel$STATE.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/GamePanel$STATE.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/GamePanel.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/GamePanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/MouseInput.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/MouseInput.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/Person.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/Person.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BrickBreaking/ScoreBoard.class" afterPath="$PROJECT_DIR$/out/production/BrickBreaking/ScoreBoard.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ball.java" afterPath="$PROJECT_DIR$/src/Ball.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Brick.java" afterPath="$PROJECT_DIR$/src/Brick.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BrickBreakingMain.java" afterPath="$PROJECT_DIR$/src/BrickBreakingMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GamePanel.java" afterPath="$PROJECT_DIR$/src/GamePanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MouseInput.java" afterPath="$PROJECT_DIR$/src/MouseInput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Person.java" afterPath="$PROJECT_DIR$/src/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ScoreBoard.java" afterPath="$PROJECT_DIR$/src/ScoreBoard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/scoreboard.txt" afterPath="$PROJECT_DIR$/src/data/scoreboard.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +33,8 @@
       <file leaf-file-name="BrickBreakingMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="22">
+              <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -35,17 +43,18 @@
       <file leaf-file-name="GamePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="280" column="30" lean-forward="true" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
+            <state relative-caret-position="363">
+              <caret line="144" column="32" lean-forward="true" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-                <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+                <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
                 <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -60,27 +69,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MouseInput.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MouseInput.java">
+      <file leaf-file-name="scoreboard.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/data/scoreboard.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+            <state relative-caret-position="42">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreBoard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScoreBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ScoreBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="127">
+              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#430#431#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
                 <element signature="method#readScoreBoard#0;class#ScoreBoard#0" expanded="false" />
-                <element signature="method#writeScoreBoard#0;class#ScoreBoard#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,8 +97,8 @@
       <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="294">
+              <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -99,9 +107,12 @@
       <file leaf-file-name="Ball.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="588">
+              <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="21" />
+              <folding>
+                <element signature="e#1014#1015#0" expanded="true" />
+                <element signature="e#1042#1043#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,7 +133,6 @@
       <find>paintc</find>
       <find>mo</find>
       <find>draw</find>
-      <find>drawRT</find>
       <find>menu</find>
       <find>menu()</find>
       <find>Startmenu</find>
@@ -131,6 +141,9 @@
       <find>PLAY</find>
       <find>START</find>
       <find>checkState</find>
+      <find>gameove</find>
+      <find>drawRT</find>
+      <find>gameo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,19 +160,22 @@
         <option value="$PROJECT_DIR$/src/Frame.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Ball.java" />
-        <option value="$PROJECT_DIR$/src/Person.java" />
         <option value="$PROJECT_DIR$/src/Menu.java" />
-        <option value="$PROJECT_DIR$/src/BrickBreakingMain.java" />
         <option value="$PROJECT_DIR$/src/store" />
-        <option value="$PROJECT_DIR$/src/MouseInput.java" />
-        <option value="$PROJECT_DIR$/src/ScoreBoard.java" />
         <option value="$PROJECT_DIR$/src/Highscore.java" />
+        <option value="$PROJECT_DIR$/src/Ball.java" />
+        <option value="$PROJECT_DIR$/src/Brick.java" />
+        <option value="$PROJECT_DIR$/src/MouseInput.java" />
+        <option value="$PROJECT_DIR$/src/Person.java" />
+        <option value="$PROJECT_DIR$/src/BrickBreakingMain.java" />
+        <option value="$PROJECT_DIR$/src/HighscoreSc.java" />
+        <option value="$PROJECT_DIR$/src/ScoreBoard.java" />
         <option value="$PROJECT_DIR$/src/GamePanel.java" />
+        <option value="$PROJECT_DIR$/src/data/scoreboard.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
@@ -191,6 +207,12 @@
               <item name="brick-breaking" type="b2602c69:ProjectViewProjectNode" />
               <item name="brick-breaking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brick-breaking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brick-breaking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,7 +291,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -280,12 +302,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3325792" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30429864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.132116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13104188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -333,7 +355,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -368,10 +390,9 @@
           <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
             <element signature="method#readScoreBoard#0;class#ScoreBoard#0" expanded="false" />
-            <element signature="method#writeScoreBoard#0;class#ScoreBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -388,7 +409,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -398,13 +422,14 @@
           <caret line="165" column="18" lean-forward="false" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
             <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
             <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
             <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
             <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -430,7 +455,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -440,13 +468,14 @@
           <caret line="297" column="0" lean-forward="true" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
             <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
             <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
             <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
             <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -472,7 +501,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -482,13 +514,14 @@
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
             <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
             <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
             <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
             <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -514,7 +547,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -524,13 +560,14 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
             <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
             <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
             <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
             <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -558,13 +595,14 @@
           <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
             <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
             <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
             <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
             <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -582,7 +620,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -598,7 +639,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -608,13 +652,14 @@
           <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
             <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
             <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
             <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
             <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -642,13 +687,14 @@
           <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
             <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
             <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
             <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
             <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -666,7 +712,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -674,22 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -710,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MouseInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Highscore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -726,19 +751,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="280" column="30" lean-forward="true" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
+        <state relative-caret-position="588">
+          <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="21" />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Brick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="44" column="34" lean-forward="false" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HighscoreSc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MouseInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="46" lean-forward="false" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScoreBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="method#readScoreBoard#0;class#ScoreBoard#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BrickBreakingMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="144" column="32" lean-forward="true" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#playGame#0;class#GamePanel#0" expanded="false" />
             <element signature="method#checkCollisions#0;class#GamePanel#0" expanded="false" />
             <element signature="method#addNewLine#0;class#GamePanel#0" expanded="false" />
             <element signature="method#update#0;class#GamePanel#0" expanded="false" />
-            <element signature="method#draw#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawScore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawstart#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawRT#0;class#GamePanel#0" expanded="false" />
+            <element signature="method#drawHighscore#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawGameOver#0;class#GamePanel#0" expanded="false" />
             <element signature="method#drawStartText#0;class#GamePanel#0" expanded="false" />
             <element signature="method#startMenu#0;class#GamePanel#0" expanded="false" />
@@ -752,25 +842,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Person.java">
+    <entry file="file://$PROJECT_DIR$/src/data/scoreboard.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="42">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ScoreBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="method#readScoreBoard#0;class#ScoreBoard#0" expanded="false" />
-            <element signature="method#writeScoreBoard#0;class#ScoreBoard#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

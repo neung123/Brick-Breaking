@@ -42,6 +42,8 @@ public class Brick {
 
     public int getY(){ return y; }
 
+    public int getX() { return x; }
+
     public Rectangle getRect(){
         return new Rectangle(x,y,width,height);
     }

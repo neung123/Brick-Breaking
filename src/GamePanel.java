@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.util.Scanner;
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
@@ -51,10 +52,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         }
         while (state == STATE.GAMEOVER){
             running = false;
-
-            if(scoreBoard.checkIfHigher(score)){
-
-            }
             drawRT();
         }
 
@@ -144,11 +141,17 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         if(ball.gameOverBall()){
             state = STATE.GAMEOVER;
             drawGameOver();
+            if(scoreBoard.checkIfHigher(score)){
+                testhighscore();
+            }
             playGame();
         }
         if(world.checkGameOverBrick() == true){
             state = STATE.GAMEOVER;
             drawGameOver();
+            if(scoreBoard.checkIfHigher(score)){
+               testhighscore();
+            }
             playGame();
         }
 
@@ -209,28 +212,45 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     }
 
     public void drawRT(){
-        Rectangle retryButton = new Rectangle(350,350,100,50);
-        Rectangle quitButton = new Rectangle(350,250,100,50);
 
-        Font font0 = new Font("arial", Font.BOLD, 50);
-        graphics.setFont(font0);
-        graphics.setColor(Color.WHITE);
-        graphics.drawString("You cant give up now!!!",140,100);
+        Rectangle retryButton = new Rectangle(350,400,100,50);
+        Rectangle quitButton = new Rectangle(350,470,100,50);
+
+        drawHighscore();
 
         graphics.setColor(Color.WHITE);
         Font font1 = new Font("arial", Font.BOLD, 30);
         graphics.setFont(font1);
-        graphics.drawString("Quit", quitButton.x + 12, quitButton.y + 30);
+        graphics.drawString("Quit", quitButton.x + 20, quitButton.y + 35);
         graphics.draw(quitButton);
-        graphics.drawString("Retry", retryButton.x + 12, retryButton.y + 30);
+        graphics.drawString("Retry", retryButton.x + 12, retryButton.y + 35);
         graphics.draw(retryButton);
         repaint();
+    }
+
+    public void drawHighscore(){
+
+        graphics.setFont(new Font("arial", Font.BOLD, 40));
+        graphics.setColor(Color.WHITE);
+        graphics.drawString("HIGH SCORE",270,80);
+
+        for (int i = 0; i < scoreBoard.people.size(); i++){
+            graphics.setFont(new Font("Courier New", Font.BOLD, 35));
+            graphics.setColor(Color.WHITE);
+            graphics.drawString(String.format("%d.  %-15.15s : %-4d",i+1,scoreBoard.people.get(i).getName(),scoreBoard.people.get(i).getScore()),120,150+(i*40));
+        }
     }
 
     public void drawGameOver(){
         graphics.setColor(Color.WHITE);
         graphics.setFont(new Font("Courier New", Font.BOLD,50));
         graphics.drawString("Game Over", 265, 250);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void drawStartText(){
@@ -267,6 +287,15 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         x = BrickBreakingMain.WIDTH / 2 - paddle.width / 2;
         world = new World();
         score = 0;
+    }
+
+    public void testhighscore(){
+        System.out.println("You make a high score!");
+        System.out.print("please input your name: ");
+        Scanner console = new Scanner(System.in);
+        String name = console.nextLine();
+
+        scoreBoard.addPerson(new Person(name,score));
     }
 
     public void paintComponent(Graphics graphics){
@@ -311,9 +340,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     public void rightStop(){dx = 0;}
     public void left(){ dx = -10; }
     public void right(){ dx = 10; }
-
-
-
 
 
 

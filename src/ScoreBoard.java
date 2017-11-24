@@ -11,6 +11,12 @@ public class ScoreBoard {
         readScoreBoard();
     }
 
+    public void addPerson(Person p){
+        people.add(p);
+        sortByScore();
+        writeScoreBoard();
+    }
+
     public ArrayList<Person> getPeople() {
         return people;
     }
@@ -45,7 +51,6 @@ public class ScoreBoard {
         while (reader.hasNextLine()){
 
             String str = reader.nextLine();
-            System.out.println(str);
             String[] statement = str.split(":");
 
             String name = statement[0].trim();
@@ -82,13 +87,16 @@ public class ScoreBoard {
         }
 
         PrintStream pout = new PrintStream(out);
-        for(int i = 0; i < people.size(); i++) pout.print(people.get(i).toString());
+        for(int i = 0; i < people.size(); i++) pout.println(people.get(i).toString());
 
         pout.close();
     }
 
     public boolean checkIfHigher(int score){
-        sortByScore();
+
+        if (score == 0) return false;
+
+        if (people.size()<5) return true;
 
         for(Person p: people){
             if(score > p.getScore()) return true;

@@ -17,6 +17,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("%s : %d\n",name,score);
+        return String.format("%s : %d",name,score);
     }
 }

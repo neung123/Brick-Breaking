@@ -42,11 +42,19 @@ public class Brick {
 
     public int getY(){ return y; }
 
-    public int getX() { return x; }
-
-    public Rectangle getRect(){
-        return new Rectangle(x,y,width,height);
+    public Rectangle getTopRect(){
+        return new Rectangle(x,y,width,1);
     }
+
+    public Rectangle getBottomRect(){
+        return new Rectangle(x,y+height,width,1);
+    }
+
+    public Rectangle getLeftRect(){
+        return new Rectangle(x,y,1,height);
+    }
+
+    public Rectangle getRightRect(){ return new Rectangle(x+height,y,1,height); }
 
     public void removeDef(){ def -= 1; }
 

@@ -8,8 +8,8 @@ public class Ball {
     public Ball(){
         x = 400;
         y = 470;
-        dx = 5;
-        dy = 5;
+        dx = 1;
+        dy = 1;
     }
 
     public void update(){
@@ -46,11 +46,9 @@ public class Ball {
 
     public double getDY(){return dy;}
 
-    public double getX() { return x; }
+    public double getDX() { return dx; }
 
-    public void setDx(double dx) {
-        this.dx = dx;
-    }
+    public void setDX(double dx) { this.dx = dx; }
 
     public boolean gameOverBall(){
         boolean gameover = false;

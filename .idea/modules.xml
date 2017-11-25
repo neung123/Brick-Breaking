@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BrickBreaking.iml" filepath="$PROJECT_DIR$/BrickBreaking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/brick-breaking.iml" filepath="$PROJECT_DIR$/brick-breaking.iml" />
     </modules>
   </component>
 </project>

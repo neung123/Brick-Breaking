@@ -11,8 +11,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     private Graphics2D graphics;
     private ScoreBoard scoreBoard = new ScoreBoard();
     double x ,dx = 0;
-    public int score = 0;
-    Timer timer = new Timer(5 , this);
+    public int score = 0,lineadd = 0;
+    Timer timer = new Timer(10 , this);
     Ball ball;
     Paddle paddle;
     World world;
@@ -71,50 +71,72 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             repaint();
 
             try {
-                Thread.sleep(10);
+                Thread.sleep(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    public void checkCollisions(){
+    public void checkCollisions() {
         Rectangle ballRect = ball.getRect();
         Rectangle paddleRect = paddle.getRect();
 
-        if(ballRect.intersects(paddleRect)){
+        if (ballRect.intersects(paddleRect)) {
 
-            if(ball.getDY() > 0) {
-
+            if (ball.getDY() > 0) {
+                lineadd++;
                 ball.setDY(-ball.getDY());
 
+                if (lineadd == 3) {
                     for (Brick b : world.bricks) {
                         b.drop();
                     }
+                    lineadd = 0;
+                }
 
-
-                if(world.getMinimumHeight() > 0) {
+                if (world.getMinimumHeight() >= 0) {
                     addNewLine();
                 }
             }
 
         }
-        for(int i = 0; i < world.bricks.size(); i++) {
-            if (ballRect.intersects(world.bricks.get(i).getRect())) {
-                world.bricks.get(i).removeDef();
+        for (int i = 0; i < world.bricks.size(); i++) {
 
+            if(ballRect.intersects(world.bricks.get(i).getTopRect()) || ballRect.intersects(world.bricks.get(i).getBottomRect())){
+                ball.setDY(-ball.getDY());
 
-                if(world.bricks.get(i).getDef() == 0){
-                    world.bricks.remove(world.bricks.get(i));
-                    score ++;
+                if(ballRect.intersects(world.bricks.get(i).getLeftRect()) || ballRect.intersects(world.bricks.get(i).getRightRect()) ){
+                    ball.setDX(-ball.getDX());
                 }
-                else  ball.setDY(-ball.getDY());
+
+                world.bricks.get(i).removeDef();
+                if (world.bricks.get(i).getDef() == 0) {
+                    world.bricks.remove(world.bricks.get(i));
+                    score++;
+                }
+                break;
+
+            }else if(ballRect.intersects(world.bricks.get(i).getRightRect()) || ballRect.intersects(world.bricks.get(i).getLeftRect())){
+                ball.setDX(-ball.getDX());
+
+                if(ballRect.intersects(world.bricks.get(i).getBottomRect()) || ballRect.intersects(world.bricks.get(i).getTopRect()) ){
+                    ball.setDY(-ball.getDY());
+                }
+                world.bricks.get(i).removeDef();
+                if (world.bricks.get(i).getDef() == 0) {
+                    world.bricks.remove(world.bricks.get(i));
+                    score++;
+                }
+                break;
+
             }
         }
     }
 
     public void addNewLine(){
         int h = world.getMinimumHeight() - Brick.height;
+        if(world.getMinimumHeight() == BrickBreakingMain.HEIGHT) h = - Brick.height;
         for (int i = 0; i < world.column; i++) {
             world.addBrick(new Brick(i * Brick.width, h));
         }
@@ -160,8 +182,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     public void drawScore(){
         graphics.setColor(Color.WHITE);
         graphics.setFont(new Font("Courier New", Font.BOLD,30));
-        graphics.drawString("Score: ", 620, 550);
-        graphics.drawString(Integer.toString(score), 750, 550);
+        graphics.drawString(String.format("Score:%4d",score), 600, 550);
         for(double k = 0; k < 3000 ; k++){
             repaint();
         }
@@ -179,34 +200,19 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
                 repaint();
             }
         }
-        graphics.setColor( new Color(0, 0, 0));
-        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
-        for(double i = 0; i < 3000 ; i++){
-            graphics.setColor(Color.RED);
-            graphics.setFont(new Font("Courier New", Font.BOLD,50));
-            graphics.drawString("3", 370, 250);
-            for(double k = 0; k < 3000 ; k++){
-                repaint();
-            }
-        }
-        graphics.setColor( new Color(0, 0, 0));
-        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
-        for(double i = 0; i < 3000 ; i++){
-            graphics.setColor(Color.YELLOW);
-            graphics.setFont(new Font("Courier New", Font.BOLD,50));
-            graphics.drawString("2", 370, 250);
-            for(double k = 0; k < 3000 ; k++){
-                repaint();
-            }
-        }
-        graphics.setColor( new Color(0, 0, 0));
-        graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
-        for(double i = 0; i < 3000 ; i++){
-            graphics.setColor(Color.GREEN);
-            graphics.setFont(new Font("Courier New", Font.BOLD,50));
-            graphics.drawString("1", 370, 250);
-            for(double k = 0; k < 3000 ; k++){
-                repaint();
+
+        for(int number = 3; number >= 1; number--){
+            graphics.setColor( new Color(0, 0, 0));
+            graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
+            for(double i = 0; i < 3000 ; i++){
+                if(number == 3) graphics.setColor(Color.RED);
+                if(number == 2) graphics.setColor(Color.YELLOW);
+                if(number == 1) graphics.setColor(Color.GREEN);
+                graphics.setFont(new Font("Courier New", Font.BOLD,50));
+                graphics.drawString(Integer.toString(number), 370, 250);
+                for(double k = 0; k < 3000 ; k++){
+                    repaint();
+                }
             }
         }
     }
@@ -272,9 +278,9 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         graphics.setColor(Color.WHITE);
         Font font1 = new Font("arial", Font.BOLD, 30);
         graphics.setFont(font1);
-        graphics.drawString("Play", playButton.x + 12, playButton.y + 30);
+        graphics.drawString("Play", playButton.x + 20, playButton.y + 35);
         graphics.draw(playButton);
-        graphics.drawString("Quit", quitButton.x + 12, quitButton.y + 30);
+        graphics.drawString("Quit", quitButton.x + 20, quitButton.y + 35);
         graphics.draw(quitButton);
         repaint();
 
@@ -304,12 +310,14 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
         graphics2.drawImage(image,0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT,null);
         graphics2.dispose();
+        graphics.dispose();
 
     }
 
     public void actionPerformed(ActionEvent e) {
         try {
-            x = Math.abs(Math.min(x + dx, BrickBreakingMain.WIDTH - paddle.width));
+            x = Math.min(x + dx, BrickBreakingMain.WIDTH - paddle.width);
+            if(x<0) x = 0;
         } catch (Exception ex) {}
     }
 

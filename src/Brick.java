@@ -7,6 +7,7 @@ public class Brick {
     private int x,y;
     public final static int width = BrickBreakingMain.WIDTH / 10;
     public final static int height = (BrickBreakingMain.HEIGHT) / 15;
+    private boolean canRemove = true;
     private Random rand = new Random();
     private int def = rand.nextInt(4) + 1;
 
@@ -32,10 +33,6 @@ public class Brick {
         graphics.setColor(new Color(0,0,0));
         graphics.drawRect(x, y, width, height);
 
-        graphics.setColor(Color.white);
-        graphics.setFont(new Font("Courier New", Font.BOLD,15));
-        graphics.drawString(String.format("%d",def), x + width/2 - 4, y + height /2 + 4);
-
     }
 
     public void drop(){ y += 10; }
@@ -56,7 +53,17 @@ public class Brick {
 
     public Rectangle getRightRect(){ return new Rectangle(x+height,y,1,height); }
 
-    public void removeDef(){ def -= 1; }
+    public Rectangle getRect(){
+        return new Rectangle(x,y,width,height);
+    }
+
+    public void removeDef(){
+        if(canRemove) def -= 1;
+    }
+
+    public void setCanRemove(boolean canRemove) {
+        this.canRemove = canRemove;
+    }
 
     public int getDef() { return def;}
 

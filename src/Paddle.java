@@ -22,7 +22,7 @@ public class Paddle extends JPanel{
         this.x = x;
     }
     public Rectangle getRect(){
-        return new Rectangle((int)x, positionY,width,height);
+        return new Rectangle((int)x, positionY,width,1);
     }
 
 

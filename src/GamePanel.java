@@ -130,6 +130,11 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
                 }
                 break;
 
+            }else if(ballRect.intersects(world.bricks.get(i).getRect())){
+                ball.setDX(-ball.getDX());
+                world.bricks.get(i).setCanRemove(false);
+            }else {
+                world.bricks.get(i).setCanRemove(true);
             }
         }
     }
@@ -164,7 +169,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             state = STATE.GAMEOVER;
             drawGameOver();
             if(scoreBoard.checkIfHigher(score)){
-                testhighscore();
+                highscore();
             }
             playGame();
         }
@@ -172,7 +177,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             state = STATE.GAMEOVER;
             drawGameOver();
             if(scoreBoard.checkIfHigher(score)){
-               testhighscore();
+               highscore();
             }
             playGame();
         }
@@ -295,13 +300,27 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         score = 0;
     }
 
-    public void testhighscore(){
-        System.out.println("You make a high score!");
-        System.out.print("please input your name: ");
-        Scanner console = new Scanner(System.in);
-        String name = console.nextLine();
+    public void highscore(){
+       String name = dialog();
+       scoreBoard.addPerson(new Person(name,score));
+    }
 
-        scoreBoard.addPerson(new Person(name,score));
+    public String dialog(){
+        String input = "";
+        int checkInput = 0;
+        try {
+
+            while (checkInput < 1) {
+                input = JOptionPane.showInputDialog("You make a new high score\n Please enter your name: ");
+                if (input.length() > 0) {
+                    checkInput++;
+                }
+            }
+        } catch (NullPointerException e) {
+            input = "Anonymous";
+        }
+
+        return input;
     }
 
     public void paintComponent(Graphics graphics){
@@ -310,8 +329,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
         graphics2.drawImage(image,0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT,null);
         graphics2.dispose();
-        graphics.dispose();
-
     }
 
     public void actionPerformed(ActionEvent e) {

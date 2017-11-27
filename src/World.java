@@ -1,9 +1,14 @@
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
- * default of the bricks are 5 rows and 10 columns
+/*
+This World class is reponsible of implementing the actual rows
+and column of the Brick class.
+
+@author Thanapoom Rattanathumawat
+@author Pornpavee Seri-umnuoy
  */
+
 public class World {
 
     public int row = 5,column = 10;

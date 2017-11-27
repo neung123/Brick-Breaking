@@ -1,6 +1,12 @@
-import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+/*
+This MouseInput class was made to interact with the position of the blocks
+made on the starter screen and the ending screen.
+
+@author Thanapoom Rattanathumawat
+@author Pornpavee Seri-umnuoy
+ */
 
 public class MouseInput implements MouseListener {
 
@@ -13,9 +19,6 @@ public class MouseInput implements MouseListener {
     public void mousePressed(MouseEvent e) {
         int mx = e.getX();
         int my = e.getY();
-
-//        Rectangle playButton = new Rectangle(350,150,100,50);
-//        Rectangle quitButton = new Rectangle(350,250,100,50);
 
         if (GamePanel.state == GamePanel.STATE.STARTMENU){
             if(mx >= 350 && mx <= 450){
@@ -36,9 +39,6 @@ public class MouseInput implements MouseListener {
                 }
             }
         }
-
-
-
     }
 
 

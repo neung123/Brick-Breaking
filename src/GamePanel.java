@@ -2,7 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
-import java.util.Scanner;
+
+/*
+This class is made mainly for other objects from different classes to be implemented into
+the frame and interact with each other.
+
+@author Thanapoom Rattanathumawat
+@author Pornpavee Seri-umnuoy
+ */
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
@@ -88,7 +95,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
                 lineadd++;
                 ball.setDY(-ball.getDY());
 
-                if (lineadd == 3) {
+                if (lineadd == 7) {
                     for (Brick b : world.bricks) {
                         b.drop();
                     }
@@ -158,7 +165,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
 
-
         ball.drawBall(graphics);
         paddle.drawPaddle(graphics,(int)x);
         world.drawWorld(graphics);
@@ -197,7 +203,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
         graphics.setColor( new Color(0, 0, 0));
         graphics.fillRect(0,0,BrickBreakingMain.WIDTH,BrickBreakingMain.HEIGHT);
-
 
         for(double i = 0; i < 4000 ; i++){
             drawStartText();
@@ -365,8 +370,5 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     public void rightStop(){dx = 0;}
     public void left(){ dx = -10; }
     public void right(){ dx = 10; }
-
-
-
 }
 

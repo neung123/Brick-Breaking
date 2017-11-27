@@ -1,3 +1,9 @@
+/*
+This Person class is reponsible for keeping a name and score of a player.
+
+@author Thanapoom Rattanathumawat
+@author Pornpavee Seri-umnuoy
+ */
 public class Person {
     String name;
     int score;

@@ -1,6 +1,13 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+/*
+This ScoreBoard class is made to check the high score and if it beats
+the current player's score.
+
+@author Thanapoom Rattanathumawat
+@author Pornpavee Seri-umnuoy
+ */
 
 public class ScoreBoard {
 

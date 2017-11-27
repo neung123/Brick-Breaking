@@ -1,6 +1,12 @@
 import java.awt.*;
 import java.util.Random;
+/*
+This Brick class is made to create the size of check individual bricks.Including
+the components of color,size, and dropping.
 
+@author Thanapoom Rattanathumawat
+@author Pornpavee Seri-umnuoy
+ */
 
 public class Brick {
 

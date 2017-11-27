@@ -1,4 +1,11 @@
 import java.awt.*;
+/*
+This Ball class is responsible for creating the ball that is displayed on the frame.
+Including methods that give interactions to the GamePanel class and more.
+
+@author Thanapoom Rattanathumawat
+@author Pornpavee Seri-umnuoy
+ */
 
 public class Ball {
 

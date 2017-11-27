@@ -2,6 +2,13 @@
 Author - Thanapoom Rattanathumawat, Pornpavee Seri-umnuoy
  */
 import javax.swing.*;
+/*
+This main class the used to create the whole visual content of this program. Mainly the frame
+and how it uses all the methods from the GamePanel class.
+
+@author Thanapoom Rattanathumawat
+@author Pornpavee Seri-umnuoy
+ */
 
 public class BrickBreakingMain {
 

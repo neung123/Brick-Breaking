@@ -1,6 +1,3 @@
-/*
-Author - Thanapoom Rattanathumawat, Pornpavee Seri-umnuoy
- */
 import javax.swing.*;
 /*
 This main class the used to create the whole visual content of this program. Mainly the frame

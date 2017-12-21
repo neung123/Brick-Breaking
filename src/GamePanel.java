@@ -75,8 +75,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 
             draw();
 
-            repaint();
-
             try {
                 Thread.sleep(3);
             } catch (InterruptedException e) {

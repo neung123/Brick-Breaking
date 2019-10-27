@@ -1,4 +1,4 @@
-# brick-breaking
+# Brick Breaking
 ------------------------------------------------------------------------------------------------------------------------
 This project is basically aiming to stimulate the times of playing the old release of the game, known as Brick Breaker. 
 First introduced in the year 2010 our project is trying to aim for a nostalgic yet different objective for the game. 
@@ -16,3 +16,17 @@ Compared to the original game, our is presented with an endless classic level.
   * The *drawPaddle(graphics,x)* method to draw paddle and specify its position by x value. 
 
 * The *checkCollisions()* method to test when the ball touches a brick and the paddle by draws a rectangle that has the same size as the ball,the paddle and a brick and uses the intersects method (from rectangle class) to determines whether or not this Rectangle and the specified Rectangle intersect
+
+# Screenshots
+
+Menu
+
+<img src ="readme_pic/1.jpg">
+
+In game
+
+<img src ="readme_pic/2.jpg">
+
+Score Board
+
+<img src ="readme_pic/3.jpg">

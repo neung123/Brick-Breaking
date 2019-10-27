@@ -27,6 +27,6 @@ In game
 
 <img src ="readme_pic/2.jpg">
 
-Score Board
+Scoreboard
 
 <img src ="readme_pic/3.jpg">
